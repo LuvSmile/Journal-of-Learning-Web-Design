@@ -1,0 +1,301 @@
+# Journal-of-Learning-Web-Design
+
+[![hackmd-github-sync-badge](https://hackmd.io/yUJHdOAoTy-jtjFQiCPfgA/badge)](https://hackmd.io/yUJHdOAoTy-jtjFQiCPfgA)
+
+
+###### tags: `Tag(Web design blogs for beginners)` `Tag(初學者學習網頁程式語言日誌)`
+
+:::info
+:bulb:**A Little Progress Each Day Adds Up To Big Results 豐碩的成果是由每一天的小前進累積起來的!!!.
+:::
+
+## 😎  Intentions
+
+- [ ] 何謂 Responsive Web Design (RWD) 響應式網頁設計
+- [ ] 學習RWD - 伸縮自如的RWD 排版術
+- [ ] 善用 Media Queries 
+- [ ] 理解CSS權重的用法
+
+## 📑 Happenings
+
+**RWD 響應式網頁設計 (Responsive Web Design)**，目的是希望網頁或是 web app 在各種不同裝置上都可以提供使用者最佳的體驗和友善的閱讀介面。 
+
+RWD 網頁的特性是「綁寬度不綁高度」，且通常是用塊狀模組去建置，因設計時必須考量到移動裝置如筆電、平板、手機等，網頁會依不同螢幕尺寸來改變編排，如縮小、移動、改變或是隱藏某些內容。此網頁製作方式，可讓各螢幕尺寸上顯示都可以更容易變化。
+
+開發RWD網站通常有兩種，使用RWD 『框架工具』或『手工切版』。套用現成模版設計方便，缺點是架構不會調整就無法提昇速度，不易優化SEO。手切RWD網站使用 HTML & CSS 編寫，程式碼精簡、可控制，通常也具備SEO架構能被索引的內容，易於隨時優化SEO。
+
+搜尋引擎友善的網頁，使用HTML文字給搜尋引擎抓取最佳化。SEO三大排名因素：『網站結構、網站內容、和外部連結』，而RWD響應式網頁設計通常有桌機、平板、手機三種版本內容網站整合，只要做好架構優化就具備SEO排名的能力。
+
+### 優點：
+- [ ] 網站可以被各種族群閱讀
+- [ ] 開發成本低及製作時間短
+- [ ] 利行動版網站索引和網站排名
+- [ ] 易隨時提升網站版面架構最佳化
+- [ ] 不同網址流量不會分散影響SEO
+- [ ] 內容網站整合和上線後維護方便
+---
+
+## 😇  Grateful for
+
+> The ability to learn something new 學習新東西的能力!!!
+
+---
+
+
+## 👩‍💻  Action items
+
+### <font color="#1E5578">RWD 網頁設計基本設定和用法</font>
+
+:::info
+:bulb: **Hint: 設定 viewport :** 響應式網頁設計需有viewport 設定，它表指示瀏覽器如何控制網頁的大小和縮放.
+:::
+- <html>的<head>區快內需有 meta 定義 viewport，指示瀏覽器控制網頁的大小和縮放。
+- meta 如無定義 viewport，瀏覽器會自行定義給予預設值，不同裝置無法正常顯示寬度。
+- 設定好 viewport，CSS media query breakpoint 也能運作正常，範例如下:
+
+```htmlmixed=
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+// 指定螢幕寬度為裝置寬度，畫面載入初始縮放比例 100%
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+</html>
+```
+
+> <font color="#1E2878">//指定螢幕寬度為裝置寬度，畫面載入初始縮放比例 100%，如<meta name="viewport" content="width=device-width, initial-scale=1.0"></font>
+
+---
+
+:::info
+:bulb: **Hint: 決定 RWD 設計排版模式：** 網頁內容在不同 viewport 下的版面如何配置後的視覺＆資訊呈現。
+:::
+
+**RWD 中有五種比較常見的設計模式：**
+- 局部流動 (mostly fluid)
+- 欄內容下排 (column drop)
+- 版面配置位移 (layout shifter)
+- 細微調整 (tiny tweaks) 適用於單欄版面配置，例如單網頁線性網站、大量文字 的文章。
+- 畫布外空間利用 (off canvas)。
+---
+
+:::info
+:bulb: **Hint: 套用 media query語法：** 設定不同螢幕寬度做樣式版型調整，讓圖片/字體大小、容器寬高等，在各種螢幕尺寸下符合期待的樣式。
+:::
+
+### Media Query 使用方式有下列三種
+- **<font color="#50A8DF">HTML 內使用 :</font> 如在 html 裡加入下面的程式碼，在視窗 screen 時會使用 style.css，列印時則使用 print.css**
+
+```htmlembedded=
+<link rel="stylesheet" type="text/css" media="screen" href="style.css">
+<link rel="stylesheet" type="text/css" media="print" href="print.css">
+```
+- **<font color="#50A8DF">CSS 內使用 :</font> 直接寫在 CSS 裡的樣式。**
+```css=
+＠media screen{
+  樣式...
+}
+@media print{
+  樣式...
+}
+```
+- **<font color="#50A8DF">CSS 內使用@import :</font> @import 可根據不同的 media 特性，import 不同的 css。**
+
+```css=
+import "style.css";
+@import "print.css" print;
+```
+
+### CSS Media Queries 使用方式： or、and、not 和 only 四種，註：or 需加上逗號『，』。範例如下:
+
+:::info
+:pushpin: **<font color="#50A8DF">OR 應用範例 1 :</font>** 
+
+@media (max-width:400px) 螢幕尺存小於等於 400px 『OR』印刷時，字體會變成粉色200px，反之就是黑色 30px。
+```css=
+ h1{
+      font-size:30px;
+  }
+  @media (max-width:400px), print{
+      h1{
+          font-size:200px;
+          color:Pink;
+      }
+  }
+```
+
+:pushpin: **<font color="#50A8DF">OR 應用範例 2 :</font>** 
+
+@media 透過 (orientation: portrait) 判斷裝置是直立或橫放，如果裝置是直立『OR』寬度小於 300px，就讓文字變成藍色 150px。
+```css=
+h1{
+      font-size:30px;
+  }
+  @media (max-width:400px), print{
+      h1{
+          font-size:200px;
+          color:Pink;
+      }
+  }
+```
+:::
+
+:::info
+:pushpin: **<font color="#50A8DF"> AND 應用範例 1
+</font>** 
+
+使用 『AND』 必須要所有條件皆滿足，如『螢幕』大小介於『200px~300px』之間時，字體會是黃色 50px。
+```css=
+ h1{
+      font-size:30px;
+  }
+  @media screen and (min-width:200px) and (max-width:300px){
+      h1{
+          font-size:50px;
+          color:yellow;
+      }
+  }
+```
+
+:pushpin: **<font color="#50A8DF">AND 應用範例 2 :</font>** 
+
+『AND』 和『OR』 可互相搭配使用，如『螢幕』大小介於『200px~300px』之間時，字體會是黃 50px，橫向印刷也會是黃色 50px 的字體。
+```css=
+h1{
+      font-size:30px;
+  }
+  @media screen and (min-width:200px) and (max-width:300px), print and (orientation: landscape){
+      h1{
+          font-size:50px;
+          color:yellow;
+      }
+  }
+```
+:::
+:::info
+:pushpin: **<font color="#50A8DF">ONLY 應用</font>** 
+
+**『ONLY』** 通常用來指定 **『只有』** 某種特定裝置媒體才能套用的某些樣式，寫在 media query 的字首，目前已不常用因直接採用 AND 或 OR 的寫法就能夠符合絕大多數的需求。
+:::
+
+:::info
+:pushpin: **<font color="#50A8DF"> ANOT 應用範例 </font>** 
+
+**『NOT』** 通常用來 **『排除』** 某些裝置媒體才能套用的某些樣式，寫在 media query 的字首，用逗號分隔就能做出不同的判斷，如除了螢幕寬度小於等於 300px **『OR』** 印刷時為橫向才會出現綠色150px的字體。
+
+```css=
+ h1{
+      font-size:30px;
+  }
+  @media not screen and (max-width:300px), print and (orientation: landscape){
+      h1{
+          font-size:50px;
+          color:green;
+      }
+  }
+```
+**註：** NOT 和 ONLY 後方都必須先接 media type ( screen 或 print )才會有作用。
+
+:::
+---
+:::info
+:bulb: **Hint: 使用相對單位設定寬高、大小：** 內容的寬高、大小，建議使用「相對單位」來設定 讓在該範圍的 viewport 中達到最好的效果。
+
+- 「相對單位」如 width: 50%、width: 100vh、height: 80vh、font-size: 2em 等，
+:::
+---
+:::info
+:bulb: **Hint: 設定文字段落或容器區塊高度：** 固定高度會因瀏覽器文字設定大小不同，而造成兩行字疊在一起或字幕只顯示一半的問題，因此設計時需考量到如何避面。行距不要設固定px
+- 行距不要設固定px
+- 區塊不要設固定高度
+- 適量使用 overflow : hidden 屬性
+:::
+---
+### <font color="#1E5578">權重分數的比例及用法 : 先看權重分數加總，再看先後順序</font>
+- 相同權重但是後寫的 css 可以覆蓋之前寫的 css
+- 當兩個選擇器同時作用在一個元素，權重高的優先生效
+
+:::info
+:bulb: **Hint: 權重高到低：** 
+!important > inline style > ID > Class/psuedo-class (偽類) /attribute（屬性選擇器）> Element > *
+:::
+
+#### <font color="#1E5578"> 0\. 全局樣式 ～ 0分 </font>
+**權重 0.0.0.0** ~ 通配符『 \* 』匹配任何元素因此權重為 0
+```css=
+/* 全站預設值 */
+* { 
+padding: 0;
+margin: 0;
+}
+```
+#### <font color="#1E5578"> 1\. HTML 標籤 ～ 1分 </font>
+**權重 0.0.0.1** ~ 『元素選擇器(tagName)』 | 『偽元素(::pseudo-element)』
+
+> 常見有：div, p, ul, ol, li, em, header, footer, article....
+
+#### <font color="#1E5578"> 2\. CSS 類別選擇器 ～ 10分 </font>
+**權重 0.0.0.1** ~ 『class 選擇器(.className)』 | 『屬性選擇器(\[attr="value"\]) 』| 『偽類(:pseudo-class)』
+
+- **class 選擇器(.className)**
+> class 在 html 寫 class="box" ，在 css 內標示<font color="red">『 . 』</font> 如 『.box』 。
+
+- **psuedo-class(偽類)，如：**
+> \[type:checkbox\]、\[attr\] 等。
+
+- **attribute（屬性選擇器），如：**
+> :nth-child() 、 :link 、 :hover 、 :focus 、:only-of-type 、 :nth-of-type 等。
+:::info
+:bulb: **範例**
+- ul>li 都是 element 所以加起來是 0-0-0-2 
+- body div ul li a span 總共 6 個 element，加起來是 0-0-0-6 
+- li.myclass 一個 element 加上一個 class ，加起來是 0-0-1-1 
+- li.myclass ~ li 兩個 element 加上一個 class ，加起來是 0-0-1-2 
+- form input\[type=email\] 兩個 element 、一個 attribute，加起來是 0-0-1-2
+:::
+
+#### <font color="#1E5578"> 3\. id 選擇器 ～ 100分 </font>
+**權重 0.1.0.0** ~ ID 選擇器 (#idName)
+> id 在 html 寫 id="home" ，在 css 內標示<font color="red">『#』</font> ，如『#home』 。
+
+#### <font color="#1E5578"> 4\. style element ~ 1000分 </font>
+**權重 1.0.0.0** ~ 內聯樣式(inline)(style="...")，inline style attribute 就是寫在 html 行內的 style
+```htmlembedded=
+<div style="color:red"\> CSS Specificity </div>
+```
+#### <font color="#1E5578"> 5\. !important 10000分 </font>
+**權重 1.0.0.0.0** ~ 屬於較特殊的等級擁有最高的優先級，會覆蓋所有其他四種等級的選擇器類型，用法如下：
+```css=
+div { 
+display: block !important; 
+}
+```
+:::info
+:pushpin: **注意: <font color="red"> 只有 !important 能超越 !important!!!</font>**
+:::
+用 **!important** 來覆蓋優先級是 **<font color="red">強烈不推薦的</font>** ，因往後想要覆蓋屬性的時候也必須加上 **!important**，會強烈破壞樣式結構和可讀性。
+```css=
+.box{ 
+      background-color: #f00 !important; 
+      } 
+.box{ 
+      background-color: #aaa !important;
+      }
+
+```
+
+
+
+```
+```
+- Table of Content
+[ToC]
+
+> Leave in-line comments! [color=#3b75c6]
+
+- Read MORE ➜ [打敗拖延症Day 13!!! Beat Procrastination!!!](https://www.notion.so/Day-13-Beat-Procrastination-21c91ca01e7749f88c1a60fb90d20a85)
+
+![](https://i.imgur.com/6aS1HrA.png)
