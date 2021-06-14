@@ -1,14 +1,11 @@
-# Journal-of-Learning-Web-Design
-
-[![hackmd-github-sync-badge](https://hackmd.io/yUJHdOAoTy-jtjFQiCPfgA/badge)](https://hackmd.io/yUJHdOAoTy-jtjFQiCPfgA)
-
-
+## 初學者學習網頁程式語言日誌
+**打敗拖延症Day 14!!! Beat Procrastination!!!**
 ###### tags: `Tag(Web design blogs for beginners)` `Tag(初學者學習網頁程式語言日誌)`
 
 :::info
 :bulb:**A Little Progress Each Day Adds Up To Big Results 豐碩的成果是由每一天的小前進累積起來的!!!.
 :::
-
+---
 ## 😎  Intentions
 
 - [ ] 何謂 Responsive Web Design (RWD) 響應式網頁設計
@@ -291,11 +288,9 @@ display: block !important;
 
 ```
 ```
+# Journal of Learning Web Design
 - Table of Content
 [ToC]
 
-> Leave in-line comments! [color=#3b75c6]
-
-- Read MORE ➜ [打敗拖延症Day 13!!! Beat Procrastination!!!](https://www.notion.so/Day-13-Beat-Procrastination-21c91ca01e7749f88c1a60fb90d20a85)
 
 ![](https://i.imgur.com/6aS1HrA.png)
